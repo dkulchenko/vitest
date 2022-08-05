@@ -51,6 +51,11 @@ export class FakeTimers {
     if (this._checkFakeTimers())
       this._clock.runAll()
   }
+  
+  runAllTimersAsync(): void {
+    if (this._checkFakeTimers())
+      this._clock.runAllAsync()
+  }
 
   runOnlyPendingTimers(): void {
     if (this._checkFakeTimers())
